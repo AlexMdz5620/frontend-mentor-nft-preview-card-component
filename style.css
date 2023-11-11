@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*General*/
+body{
+    background-color: hsl(217, 54%, 11%);
+    color: hsl(0, 0%, 100%);
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+main{
+    height: 95vh;
+    display: grid;
+    place-content: center;
+}
+.container{
+    width: 350px;
+    padding: 20px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 30px 30px hsl(218, 51%, 10%);
+}
+/*Image Container*/
+/* .imgContainer{
+    overflow: hidden;
+} */
+.img{
+    width: 100%;
+    border-radius: .5rem;
+    transition: all .5s ease-in-out;
+}
+.imgContainer::before {
+    cursor: pointer;
+    content: "";
+    height: 310px;
+    width: 310px;
+    position: absolute;
+    top: 56px;
+    left: 603px;
+    border-radius: 0.5rem;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.imgContainer::after {
+    content: url(images/icon-view.svg);
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    top: 203px;
+    left: 761px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.imgContainer:hover::before {
+    opacity: 1;
+}
+  .imgContainer:hover::after {
+    opacity: 1;
+}
+
+/*Info NFT Container*/
+.infoNFT h1{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+    padding: 5px 0;
+    transition:all .5s ease-in-out;
+}
+.infoNFT h1:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+.infoNFT p{
+    font-weight: 100;
+    padding: 5px 0;
+    margin: 10px 0;
+    color: hsl(215, 51%, 70%);
+}
+/*Info Cost Time Container*/
+.infoCostTime{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+.cost{
+    display: flex;
+    align-items: center;
+    color: hsl(178, 100%, 50%);
+}
+.cost img{
+    padding: 0 10px 0 0;
+}
+.time{
+    display: flex;
+    align-items: center;
+    color: hsl(215, 51%, 70%);
+}
+.time img{
+    padding: 0 10px 0 0;
+}
+/*Info Person Container*/
+.infoPerson{
+    display: flex;
+    align-items: center;
+    margin: 15px 0 0;
+}
+.infoPerson img{
+    width: 35px;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 100%;
+}
+.infoPerson p{
+    margin: 0 15px;
+}
+.creation{
+    color: hsl(215, 51%, 70%);
+}
+.person{
+    transition:all .5s ease-in-out;
+}
+.person:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+/*Footer*/
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+@media screen and (max-width: 375px) {
+    main{
+        height: 120vh;
+    }
+    .imgContainer::before {
+        position: absolute;
+        top: 47px;
+        left: 33px;
+        border-radius: 0.5rem;
+    }
+    .imgContainer::after {
+        position: absolute;
+        top: 201px;
+        left: 187.5px;
+        transform: translate(-50%, -50%);
+    }
+}
