@@ -24,9 +24,9 @@ main{
     box-shadow: 0 0 30px 30px hsl(218, 51%, 10%);
 }
 /*Image Container*/
-/* .imgContainer{
-    overflow: hidden;
-} */
+.imgContainer{
+    position: relative;
+}
 .img{
     width: 100%;
     border-radius: .5rem;
@@ -38,8 +38,8 @@ main{
     height: 310px;
     width: 310px;
     position: absolute;
-    top: 56px;
-    left: 603px;
+    top: 0;
+    left: 0;
     border-radius: 0.5rem;
     background-color: hsla(178, 100%, 50%, 0.5);
     opacity: 0;
@@ -50,8 +50,8 @@ main{
     height: 48px;
     width: 48px;
     position: absolute;
-    top: 203px;
-    left: 761px;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -136,21 +136,4 @@ main{
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
-}
-@media screen and (max-width: 375px) {
-    main{
-        height: 120vh;
-    }
-    .imgContainer::before {
-        position: absolute;
-        top: 47px;
-        left: 33px;
-        border-radius: 0.5rem;
-    }
-    .imgContainer::after {
-        position: absolute;
-        top: 201px;
-        left: 187.5px;
-        transform: translate(-50%, -50%);
-    }
 }
